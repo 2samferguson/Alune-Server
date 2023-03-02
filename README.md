@@ -8,7 +8,7 @@ Fortunately, there are certain tools that undertake most of the computational gr
 
 To create the model, `grabdata.py` first collects match statistics across 800 different LoLalytics pages, and processes the data into NumPy tensors of shape (160, 160, 5, 5). Then, `model.py` uses ideas from classical statistical theory to propagate these tensors through a series of transformations into suitable model parameters. Here, the `np.einsum()` method is used for generalized tensor (linear algebra) operations. The resulting architecture uses a fixed first-layer encoding and has a single weight layer with around 25,000 parameters.
 
-Since most of the heavy computational work was outsourced, training time stayed constant regardless of the number of samples, which allowed the model to effectively learn from 100x more instances than in my original training set. This method was successful in achieving convergence on the match prediction task, and through this metric the resulting model also surpassed human (expert) performance in evaluating team compositions.
+Since most of the heavy computational work was outsourced and training input was converted to large-scale statistics rather than individual instances, training time stayed constant regardless of the number of samples, which allowed the model to effectively learn from 100x more data than in my original training set. This method was successful in achieving convergence on the match prediction task, and through this metric the resulting model also surpassed human (expert) performance in evaluating team compositions.
 
 
 
