@@ -1,5 +1,5 @@
 # Alune Server
-Alune Server is a back-end web application built in Flask and deployed with AWS Elastic Beanstalk. The server manages and processes the data used for model construction and training. Match statistics and model parameters are stored in the `data` folder and hosted at specified web addresses through `application.py`
+Alune Server is a back-end web application built in Flask and deployed with AWS Elastic Beanstalk. The server manages and processes the data used for the [Alune AI](https://github.com/2samferguson/Alune-AI) model construction and training. Match statistics and model parameters are stored in the `data` folder and hosted at specified web addresses through `application.py`
 
 # Model Training
 Individual match data is acquired through the [Riot Games APIs](https://developer.riotgames.com/), which provides a database of over 1 billion match instances. However, API restraints and other compute limitations reduced the number of samples I was able to utilize through this avenue. When attempting to train Logistic Regression / Deep Learning models through the traditional optimized gradient descent methods, computational resources limited my sample size to 100,000 match instances, which was not sufficient to achieve convergence on the match prediction task.
